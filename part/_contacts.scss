@@ -1,0 +1,28 @@
+.contact {
+    background-image: url(img/section2.jpeg);
+    @extend %section2;
+
+
+    .container {
+        @extend %container-contact;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    &__photo {
+        display: flex;
+        flex-direction: row;
+
+        img {
+            padding: 15px;
+        }
+    
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 50px;
+    }
+}

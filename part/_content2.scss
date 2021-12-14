@@ -1,0 +1,21 @@
+.content2 {
+    // background-image: url(img/content2-bg.png);
+    @extend %section2;
+
+
+    .container {
+        @extend %container-content2;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__description1 {
+        @extend %content2-discription;
+        
+    
+    }
+
+    &__description2 {
+        @extend %content2-discription;
+    }
+}

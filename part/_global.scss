@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body , html {
+    height: 100%; 
+}
+
+body {
+    font: {
+        family: $Lato;
+        size: 1rem;
+    }
+    line-height: 1.5em;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+    background-color: rgba($color: #ffffff, $alpha: 0.6);
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    line-height: 5rem;
+    width: 218px;
+    height: 5rem;
+    font-size: 18px;
+    margin-top: 60px;
+    transition: background-color 500ms linear;
+    border: 1px solid $white;
+
+    &:hover {
+        background-color: rgba($color: #ffffff, $alpha: 0.0)
+    }
+}
+
+.title {
+    text-align:center;
+
+    &::after{
+        display:inline-block;
+        
+    }
+
+    &--white {
+        color: $white;
+
+        &::after{
+            content:url(); //ссылка на белое изображение
+        }
+    }
+
+    &--gorchiza {
+        color: $gorchiza;
+
+        &::after{
+            content:url(); //ссылка на горчичное изображение
+        }
+    }
+
+
+}

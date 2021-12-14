@@ -1,0 +1,47 @@
+.content1 {
+    background-image: url(img/content1.jpg);
+    @extend %section1;
+    padding: 100px;
+    display: flex;
+    justify-content: flex-end;
+  
+    .container {
+        @extend %container-content1;
+        flex-direction: column;
+        margin: 0;
+        align-items: center;
+        background-color: rgba($color: #000000, $alpha: 0.8);
+        }
+
+        .logo4 {
+            margin: 20px auto;
+        }
+
+        .content1__photo {
+            display: flex;
+            flex-direction: row;
+
+            img {
+                border-radius: 50%;
+                border: 2px solid ;
+                margin: 5px;
+            }
+        }
+
+        .content1__description {
+            text-align: center;
+            margin-bottom: 50px;
+
+            p {
+                line-height: 28px;
+            }
+
+            h2 {
+                font: {
+                    size:36px;
+                    family:$Yeseva;
+                    weight:normal;
+                }
+            }
+        }
+}
