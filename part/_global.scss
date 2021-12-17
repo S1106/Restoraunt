@@ -40,6 +40,8 @@ a {
 
 .title {
     text-align:center;
+    display: flex;
+    flex-direction: column;
 
     &::after{
         display:inline-block;
@@ -50,7 +52,16 @@ a {
         color: $white;
 
         &::after{
-            content:url(); //ссылка на белое изображение
+            content:url(img/white.png); //ссылка на белое изображение
+            padding: 25px 0;
+        }
+    }
+
+    &--whitebig {
+        color: $white;
+
+        &::after{
+            content:url(img/whitebig.png); //ссылка на белое большое изображение
         }
     }
 
@@ -58,7 +69,7 @@ a {
         color: $gorchiza;
 
         &::after{
-            content:url(); //ссылка на горчичное изображение
+            content:url(img/orange.png); //ссылка на горчичное изображение
         }
     }
 

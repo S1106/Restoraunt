@@ -1,6 +1,7 @@
 .header {
     background-image: url('img/header.jpg');
     @extend %section1;
+    @extend %section_height;
 }
     .container {
     @extend %container;
@@ -16,8 +17,8 @@
         color: $white;
         text-align: center;
         line-height: 100px;
-        padding: 60px 0;
         text-shadow: $black 2px 2px;
+        padding-top: 5%;
     }
 
     a:nth-child(1) {

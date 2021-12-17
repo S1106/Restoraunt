@@ -1,12 +1,58 @@
 .contact {
-    background-image: url(img/section2.jpeg);
-    @extend %section2;
+    background: url(img/section2.jpg),
+    linear-gradient(to right, #F4F2F2, #FFFFFF) ;
+                    background-blend-mode: overlay;
+                    box-shadow: inset 0 4px 40px rgba(0,0,0, 0.1);
+    // @extend %section2;
 
 
     .container {
         @extend %container-contact;
         flex-direction: row;
         align-items: flex-start;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 25px;
+        grid-row-gap: 15px ;
+
+        label {
+            display: block;
+            color: $gorchiza;
+            font-weight: bold;
+            text-align: start;
+        }
+    }
+
+    &__form {
+        font-size: 14px;
+    }
+
+    input {
+        width: 170px;
+        height: 2rem;
+        border: 1px solid #9B9B9B;
+    }
+
+    input::placeholder {
+        padding: 8px;
+        font-style: italic;
+        color: #9B9B9B;
+    }
+
+    .form__item_button {
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+
+    .form__item_button input { 
+        background-color: $gorchiza;
+        font-size: 14px;
+        color: $white;
+        border:transparent
     }
 
     &__photo {
@@ -24,5 +70,29 @@
         flex-direction: column;
         text-align: center;
         padding: 15px 50px;
+    }
+
+    p {
+        font: {
+            family: $Lato;
+            size: 1rem;
+            weight: normal;
+        }
+        color: $black;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    h3 {
+        font: {
+            family: $Yeseva;
+            size: 36px;
+            weight: normal;
+        }
+        color: $gorchiza;
+    }
+
+    h3::after {
+        padding-top: 20px
     }
 }

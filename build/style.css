@@ -6,18 +6,14 @@
   margin: 0 auto;
   padding: 100px 0; }
 
+.header {
+  min-height: 750px; }
+
 .header, .content1 {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
   color: #fff; }
-
-.content2, .contact {
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
-  background-blend-mode: overlay;
-  color: #000; }
 
 .content3 {
   background-repeat: no-repeat;
@@ -38,7 +34,7 @@
 .content2 .container {
   display: flex;
   width: 90%;
-  padding: 100px; }
+  padding: 100px 0; }
 
 .content3 .container {
   display: flex;
@@ -61,8 +57,8 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
-  width: 474px; }
+  width: 524px;
+  padding: 0 50px; }
 
 .content3__description {
   display: flex;
@@ -103,17 +99,24 @@ a {
     background-color: rgba(255, 255, 255, 0); }
 
 .title {
-  text-align: center; }
+  text-align: center;
+  display: flex;
+  flex-direction: column; }
   .title::after {
     display: inline-block; }
   .title--white {
     color: #fff; }
     .title--white::after {
-      content: url(); }
+      content: url(img/white.png);
+      padding: 25px 0; }
+  .title--whitebig {
+    color: #fff; }
+    .title--whitebig::after {
+      content: url(img/whitebig.png); }
   .title--gorchiza {
     color: #CC9900; }
     .title--gorchiza::after {
-      content: url(); }
+      content: url(img/orange.png); }
 
 .header {
   background-image: url("img/header.jpg"); }
@@ -128,8 +131,8 @@ a {
     color: #fff;
     text-align: center;
     line-height: 100px;
-    padding: 60px 0;
-    text-shadow: #000 2px 2px; }
+    text-shadow: #000 2px 2px;
+    padding-top: 5%; }
   .container a:nth-child(1) {
     margin-right: 15px; }
   .container a:nth-child(2) {
@@ -148,8 +151,7 @@ a {
       font-weight: normal;
       color: #CC9900;
       text-align: center;
-      line-height: 40px;
-      padding-bottom: 25px; }
+      line-height: 40px; }
     .about .container .about__text {
       display: flex;
       flex-direction: column;
@@ -157,10 +159,12 @@ a {
       color: #4C4C4C; }
       .about .container .about__text img {
         margin: 0 auto; }
+      .about .container .about__text .autograph {
+        transform: translateX(40px);
+        padding: 20px 0; }
       .about .container .about__text p {
         text-align: center;
-        line-height: 28px;
-        padding: 15px 0; }
+        line-height: 28px; }
 
 .content1 {
   background-image: url(img/content1.jpg);
@@ -191,9 +195,33 @@ a {
       font-family: "Yeseva One", cursive;
       font-weight: normal; }
 
-.content2 .container {
-  flex-direction: row;
-  justify-content: space-between; }
+.content2 {
+  background: url(img/content3.png), linear-gradient(to right, #F3F1F1, #FFFFFF);
+  background-blend-mode: overlay;
+  box-shadow: inset 0 4px 40px rgba(0, 0, 0, 0.1); }
+  .content2 .container {
+    flex-direction: row;
+    justify-content: space-between; }
+    .content2 .container .price {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #CC9900;
+      color: #CC9900; }
+    .content2 .container span, .content2 .container .price {
+      font-family: "Yeseva One", cursive;
+      font-size: 21px;
+      font-weight: normal;
+      color: #CC9900;
+      text-align: center; }
+    .content2 .container h3 {
+      font-family: "Yeseva One", cursive;
+      font-size: 36px;
+      font-weight: normal;
+      color: #CC9900; }
+    .content2 .container .menu__item {
+      padding: 20px 0; }
+    .content2 .container h3::after {
+      padding-top: 25px; }
 
 .content3 {
   background-image: url(img/content3.jpg);
@@ -215,10 +243,41 @@ a {
     font-weight: normal; }
 
 .contact {
-  background-image: url(img/section2.jpeg); }
+  background: url(img/section2.jpg), linear-gradient(to right, #F4F2F2, #FFFFFF);
+  background-blend-mode: overlay;
+  box-shadow: inset 0 4px 40px rgba(0, 0, 0, 0.1); }
   .contact .container {
     flex-direction: row;
     align-items: flex-start; }
+  .contact form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 25px;
+    grid-row-gap: 15px; }
+    .contact form label {
+      display: block;
+      color: #CC9900;
+      font-weight: bold;
+      text-align: start; }
+  .contact__form {
+    font-size: 14px; }
+  .contact input {
+    width: 170px;
+    height: 2rem;
+    border: 1px solid #9B9B9B; }
+  .contact input::placeholder {
+    padding: 8px;
+    font-style: italic;
+    color: #9B9B9B; }
+  .contact .form__item_button {
+    margin: 0 auto;
+    padding-top: 30px; }
+  .contact .form__item_button input {
+    background-color: #CC9900;
+    font-size: 14px;
+    color: #fff;
+    border: transparent; }
   .contact__photo {
     display: flex;
     flex-direction: row; }
@@ -229,6 +288,20 @@ a {
     flex-direction: column;
     text-align: center;
     padding: 15px 50px; }
+  .contact p {
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #000;
+    text-align: center;
+    padding: 15px 0; }
+  .contact h3 {
+    font-family: "Yeseva One", cursive;
+    font-size: 36px;
+    font-weight: normal;
+    color: #CC9900; }
+  .contact h3::after {
+    padding-top: 20px; }
 
 .footer {
   background-color: rgba(0, 0, 0, 0.75); }
@@ -243,5 +316,7 @@ a {
     flex-basis: calc(100% / 3); }
   .footer__description3 {
     flex-basis: calc(100% / 3); }
+  .footer .paycell {
+    padding-top: 10%; }
 
 /*# sourceMappingURL=style.css.map */
