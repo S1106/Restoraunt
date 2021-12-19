@@ -1,15 +1,17 @@
 .content2 {
     background: url(img/content3.png),
-    linear-gradient(to right, #F3F1F1 , #FFFFFF) ;
-                    background-blend-mode: overlay;
-                    box-shadow: inset 0 4px 40px rgba(0,0,0, 0.1);
-    // @extend %section2;
-
+        linear-gradient(to right, #F3F1F1, #FFFFFF);
+    background-blend-mode: overlay;
+    box-shadow: inset 0 4px 40px rgba(0, 0, 0, 0.1);
 
     .container {
         @extend %container-content2;
         flex-direction: row;
         justify-content: space-between;
+
+        @include screen1020 {
+            flex-direction: column;
+        }
 
         .price {
             display: flex;
@@ -18,12 +20,14 @@
             color: $gorchiza;
         }
 
-        span , .price {
+        span,
+        .price {
             font: {
                 family: $Yeseva;
                 size: 21px;
                 weight: normal;
             }
+
             color: $gorchiza;
             text-align: center;
         }
@@ -34,7 +38,12 @@
                 size: 36px;
                 weight: normal;
             }
+
             color: $gorchiza;
+
+            @include screen1020 {
+                margin-top: 20px;
+            }
         }
 
         .menu__item {
@@ -50,7 +59,7 @@
 
     &__description1 {
         @extend %content2-discription;
-        
+
     }
 
     &__description2 {

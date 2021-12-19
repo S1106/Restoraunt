@@ -12,29 +12,21 @@
 
 %section1 {
     background: {
-        repeat:no-repeat;
+        repeat: no-repeat;
         position: center top;
-        size:cover;
+        size: cover;
     }
-    color: $white;
-}
 
-%section2 {
-    background: {
-        repeat:no-repeat;
-        position: center top;
-        size:cover;
-        blend-mode:overlay;
-    }
-    color: $black;
+    color: $white;
 }
 
 %section3 {
     background: {
-        repeat:no-repeat;
+        repeat: no-repeat;
         position: center top;
-        size:cover;
+        size: cover;
     }
+
     color: $white;
 }
 
@@ -60,14 +52,12 @@
     display: flex;
     width: 90%;
     max-width: 850px;
-    max-height: 550px;
     padding: 100px;
 }
 
 %container-contact {
     display: flex;
     width: 90%;
-    padding: 60px;
 }
 
 %container-footer {
@@ -89,8 +79,24 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 690px;
 }
 
+// responsive //
 
+@mixin tablet {
+    @media screen and (max-width:768px) {
+        @content;
+    }
+}
 
+@mixin phone {
+    @media screen and (max-width:512px) {
+        @content;
+    }
+}
+
+@mixin screen1020 {
+    @media screen and (max-width:1020px) {
+        @content;
+    }
+}

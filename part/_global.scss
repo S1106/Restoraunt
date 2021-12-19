@@ -4,8 +4,9 @@
     box-sizing: border-box;
 }
 
-body , html {
-    height: 100%; 
+body,
+html {
+    height: 100%;
 }
 
 body {
@@ -13,6 +14,7 @@ body {
         family: $Lato;
         size: 1rem;
     }
+
     line-height: 1.5em;
 }
 
@@ -33,26 +35,31 @@ a {
     transition: background-color 500ms linear;
     border: 1px solid $white;
 
+    @include tablet {
+        display: block;
+        margin: 15px;
+    }
+
     &:hover {
         background-color: rgba($color: #ffffff, $alpha: 0.0)
     }
 }
 
 .title {
-    text-align:center;
+    text-align: center;
     display: flex;
     flex-direction: column;
 
-    &::after{
-        display:inline-block;
-        
+    &::after {
+        display: inline-block;
+
     }
 
     &--white {
         color: $white;
 
-        &::after{
-            content:url(img/white.png); //ссылка на белое изображение
+        &::after {
+            content: url(img/white.png); //ссылка на белое изображение
             padding: 25px 0;
         }
     }
@@ -60,16 +67,16 @@ a {
     &--whitebig {
         color: $white;
 
-        &::after{
-            content:url(img/whitebig.png); //ссылка на белое большое изображение
+        &::after {
+            content: url(img/whitebig.png); //ссылка на белое большое изображение
         }
     }
 
     &--gorchiza {
         color: $gorchiza;
 
-        &::after{
-            content:url(img/orange.png); //ссылка на горчичное изображение
+        &::after {
+            content: url(img/orange.png); //ссылка на горчичное изображение
         }
     }
 

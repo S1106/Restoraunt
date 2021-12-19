@@ -9,30 +9,31 @@
         @extend %container-content3;
         flex-direction: column;
         background-color: rgba($color: #000000, $alpha: 0.8);
-        }
+    }
 
     &__description {
         @extend %content3-description;
-        
+
 
         h2 {
-            
+
             font: {
-                family:$Yeseva;
+                family: $Yeseva;
                 size: 36px;
-                weight:normal;
+                weight: normal;
             }
         }
 
         p {
             text-align: center;
-            line-height:42px;
+            line-height: 42px;
+
             font: {
-                family:$Lato;
+                family: $Lato;
                 size: 24px;
-                weight:normal;
+                weight: normal;
             }
-            
+
         }
     }
 

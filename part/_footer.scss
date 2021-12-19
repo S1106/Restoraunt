@@ -8,6 +8,12 @@
         justify-content: center;
         text-align: center;
         align-items: flex-start;
+
+        @include tablet {
+            flex-direction: column;
+            width: 50%;
+            align-items: center;
+        }
     }
 
     &__description1 {
@@ -25,6 +31,16 @@
     .paycell {
         padding-top: 10%;
     }
+
+    h2 {
+        font: {
+            family: $Yeseva;
+            weight: normal;
+        }
+
+        @include tablet {
+            margin-top: 30px;
+        }
+
+    }
 }
-
-

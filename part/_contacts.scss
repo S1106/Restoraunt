@@ -1,23 +1,38 @@
 .contact {
     background: url(img/section2.jpg),
-    linear-gradient(to right, #F4F2F2, #FFFFFF) ;
-                    background-blend-mode: overlay;
-                    box-shadow: inset 0 4px 40px rgba(0,0,0, 0.1);
-    // @extend %section2;
-
+        linear-gradient(to right, #F4F2F2, #FFFFFF);
+    background-blend-mode: overlay;
+    box-shadow: inset 0 4px 40px rgba(0, 0, 0, 0.1);
 
     .container {
         @extend %container-contact;
         flex-direction: row;
         align-items: flex-start;
+
+        @include tablet {
+            flex-direction: column;
+        }
+    }
+
+
+
+    .contact__photo {
+        img {
+            width: 50%;
+        }
     }
 
     form {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 25px;
-        grid-row-gap: 15px ;
+
+        grid: {
+            template: {
+                columns: 1fr 1fr;
+                rows: 1fr 1fr;
+            }
+
+            gap: 15px 25px;
+        }
 
         label {
             display: block;
@@ -32,27 +47,39 @@
     }
 
     input {
-        width: 170px;
+        width: 100%;
         height: 2rem;
         border: 1px solid #9B9B9B;
+        padding: 8px;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            font-style: italic;
+            color: #9B9B9B;
+        }
     }
 
-    input::placeholder {
-        padding: 8px;
-        font-style: italic;
-        color: #9B9B9B;
-    }
+
 
     .form__item_button {
+
+        input {
+            width: 50%;
+        }
+
         margin: 0 auto;
         padding-top: 30px;
+
     }
 
-    .form__item_button input { 
+    .form__item_button input {
         background-color: $gorchiza;
         font-size: 14px;
         color: $white;
-        border:transparent
+        border: transparent
     }
 
     &__photo {
@@ -62,7 +89,7 @@
         img {
             padding: 15px;
         }
-    
+
     }
 
     &__description {
@@ -70,6 +97,11 @@
         flex-direction: column;
         text-align: center;
         padding: 15px 50px;
+        flex-basis: 50%;
+    }
+
+    &__photo {
+        flex-basis: 50%;
     }
 
     p {
@@ -78,6 +110,7 @@
             size: 1rem;
             weight: normal;
         }
+
         color: $black;
         text-align: center;
         padding: 15px 0;
@@ -89,6 +122,7 @@
             size: 36px;
             weight: normal;
         }
+
         color: $gorchiza;
     }
 
